@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="static/gpt.css">
+    <script src="static/scrpit.js"></script>
+    <title>Videoplayer</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Add YouTube logo, search box, and navigation icons here -->
+        <img src="youtube_logo.png" alt="Logo">
+        <input type="text" placeholder="Type any video" class="search-box">
+        <div class="navigation-icons">
+            <a href="/" class = "icons"><i class="material-icons">home</i></a>
+            <a href="/trends" class = "icons"><i class="material-icons">explore</i></a>
+            <a href="/subs" class = "icons"><i class="material-icons">subscriptions</i></a>
+            <!-- Add more navigation icons as needed -->
+        </div>
+    </header>
+    <main>
+        <div class="side-bar">
+            <!-- Add sidebar content (navigation links) here -->
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/trends">Trending</a></li>
+                <li><a href="/subs">Subscriptions</a></li>
+                <!-- Add more sidebar links as needed -->
+            </ul>
+        </div>
+        <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="videoFile" id="videoFile">
+            <input type="submit" value="Upload">
+        </form>        
+    </main>
+    <!-- Main Body Ends -->
+    <script>
+
+    </script>
+</body>
+</html>

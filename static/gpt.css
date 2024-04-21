@@ -1,0 +1,117 @@
+/* styles/index.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif; /* Use a common font for better compatibility */
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-icons {
+    text-decoration: none;
+}
+
+/* Header styles */
+.header {
+    background-color: #e96449; /* Customize your header color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Search box styles */
+.search-box {
+    width: 300px; /* Adjust the width as needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-sizing: border-box; /* Include padding in the width */
+    font-size: 16px;
+}
+
+/* Navigation icons styles */
+.navigation-icons {
+    margin-top: 10px;
+}
+
+.navigation-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Sidebar styles */
+.side-bar {
+    background-color: #333;
+    color: #FFF;
+    width: 250px;
+    padding: 20px;
+}
+
+/* Sidebar links styles */
+.side-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-bar li {
+    margin-bottom: 10px;
+}
+
+.side-bar a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+}
+
+.side-bar a:hover {
+    background-color: #555;
+}
+
+/* Content styles */
+.content {
+    padding: 20px;
+}
+
+/* Video card styles */
+.video-card {
+    border: 1px solid #DDD;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    /* Add more styles for video cards */
+}
+
+.video-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.video-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.video-card p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive video embeds */
+.youtube-video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio for videos */
+}
+
+.youtube-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

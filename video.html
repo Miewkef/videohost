@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="static/gpt.css">
+    <title>Videoplayer</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Add YouTube logo, search box, and navigation icons here -->
+        <img src="youtube_logo.png" alt="Logo">
+        <input type="text" placeholder="Type any video" class="search-box">
+        <div class="navigation-icons">
+            <a href="/" class = "icons"><i class="material-icons">home</i></a>
+            <a href="/trends" class = "icons"><i class="material-icons">explore</i></a>
+            <a href="/subs" class = "icons"><i class="material-icons">subscriptions</i></a>
+            <!-- Add more navigation icons as needed -->
+        </div>
+    </header>
+    <main>
+        <div class="side-bar">
+            <!-- Add sidebar content (navigation links) here -->
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/trends">Trending</a></li>
+                <li><a href="/subs">Subscriptions</a></li>
+                <!-- Add more sidebar links as needed -->
+            </ul>
+        </div>
+        <div class="content">
+            <!-- Add video cards and video content here -->
+            <div class="video-card">
+                <video  width="500" controls id="video" preload="metadata" >
+                    <source src="/static/GangTortureDance(1).mp4" type="video/mp4"/>
+                </video>
+                <h3>Gang Torture Dance</h3>
+                <p>Банда совершает смертоносный печальный танец в этом новом эпизоде «Золотого ветра»!</p>
+
+            <!-- Add more video cards as needed -->
+        </div>
+    </main>
+    <!-- Main Body Ends -->
+</body>
+</html>
