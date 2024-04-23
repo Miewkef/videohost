@@ -58,5 +58,15 @@ func handleVideo(w http.ResponseWriter, r *http.Request) {
 }
 
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
-
+	fileName := "upload.html"
+	t, err := template.ParseFiles(fileName)
+	if err != nil {
+		fmt.Println("error while parsing file", err)
+		return
+	}
+	err = t.ExecuteTemplate(w, fileName, nil)
+	if err != nil {
+		fmt.Println("error while executing template", err)
+		return
+	}
 }
