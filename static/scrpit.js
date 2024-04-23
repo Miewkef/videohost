@@ -1,16 +1,4 @@
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let formData = new FormData();
-    formData.append('videoFile', document.getElementById('videoFile').files[0]);
-
-    fetch('/upload', {
-        method: 'POST',
-        body: formData
-    }).then(response => {
-        // Handle response from the server
-        console.log("Upload succesfull");
-    }).catch(error => {
-        // Handle error
-        console.log("Upload error");
-    });
-});
+var container = document.getElementById("container");
+for (var i = 0; i < 10; i++) {
+    container.innerHTML += '<div class="box"> <div class="video-card"><img src="video_thumbnail2.jpg" alt="Video Thumbnail"><h3>Title of Video 2</h3><p>Description of Video 2</p></div></div>';
+}

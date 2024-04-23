@@ -3,9 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
-	"io"
 	"net/http"
-	"os"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -59,33 +57,5 @@ func handleVideo(w http.ResponseWriter, r *http.Request) {
 }
 
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
-	// Check if the request method is POST
-	if r.Method == http.MethodPost {
-		// Parse the form data including the video file
-		r.ParseMultipartForm(10 << 20) // 10 MB max file size
-		file, _, err := r.FormFile("videoFile")
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		defer file.Close()
 
-		// Read the file content
-		fileBytes, err := io.ReadAll(file)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		// Handle the file content as needed (e.g., save to disk, process, etc.)
-		// Example: Save the file to disk
-		err = os.WriteFile("uploaded_video.mp4", fileBytes, 0644)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		// Respond with a success message
-		w.Write([]byte("File uploaded successfully"))
-	}
 }
