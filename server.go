@@ -19,6 +19,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		handleVideo(w, r)
 	case "/admin":
 		fmt.Fprint(w, "u r on admin page")
+	case "/video2":
+		handleVideo2(w, r)
 	default:
 		fmt.Fprint(w, "error on url/path")
 	}
@@ -59,6 +61,20 @@ func handleVideo(w http.ResponseWriter, r *http.Request) {
 
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	fileName := "upload.html"
+	t, err := template.ParseFiles(fileName)
+	if err != nil {
+		fmt.Println("error while parsing file", err)
+		return
+	}
+	err = t.ExecuteTemplate(w, fileName, nil)
+	if err != nil {
+		fmt.Println("error while executing template", err)
+		return
+	}
+}
+
+func handleVideo2(w http.ResponseWriter, r *http.Request) {
+	fileName := "video2.html"
 	t, err := template.ParseFiles(fileName)
 	if err != nil {
 		fmt.Println("error while parsing file", err)
