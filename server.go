@@ -14,7 +14,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	case "/upload":
 		uploadHandler(w, r)
 	case "/dance":
-		http.ServeFile(w, r, "./static/GangTortureDance(1).mp4")
+		http.ServeFile(w, r, "./static/videos/GangTortureDance(1).mp4")
 	case "/video":
 		handleVideo(w, r)
 	case "/admin":
